@@ -10,7 +10,7 @@ const ProductsList = ({filterProducts}) => {
     const { img, category, name, _id:id, cost } = p;  //Destructuro lo que necesito
     return (
       <div key={id} className={styles.container}>
-        <Products name={name} img={img} category={category} cost={cost} />
+        <Products name={name} img={img} category={category} cost={cost} id={id}/>
       </div>
     );
   });

@@ -39,12 +39,15 @@ export const UserProvider = ({ children }) =>{
     setUserState({...userState,points: userState.points + number})
   }
 
+  const addRedeem = (obj) => {
+    setUserState({...userState,redeemHistory: userState.redeemHistory.concat(obj) })
+  }
 
   if (!userState) {
     return <h1>Loading...</h1>
   }
 
-  return <UserContext.Provider value={{ userState, addPoints }}>{children}</UserContext.Provider>
+  return <UserContext.Provider value={{ userState, addPoints, addRedeem }}>{children}</UserContext.Provider>
 }
 
 

@@ -3,10 +3,11 @@ import styles from "./Products.module.scss";
 import { useUser } from "../../Hook/useHookUser";
 import icons from "~/assets/icons/coin.svg";
 import BotonCanjear from "./BotonCanjear/BotonCanjear"
+import BotonRedeem from "./BotonRedeem/BotonRedeem";
 
 
 
-const Products = ({name, img, category, cost}) => {
+const Products = ({name, img, category, cost, id}) => {
 
   const user = useUser()
 
@@ -19,7 +20,7 @@ const Products = ({name, img, category, cost}) => {
     {active && 
     <div className={styles.containerSelected}>
       <div>{cost}<img alt="logo" src={icons} /></div> 
-      <button className={styles.buttonSelected}>Redeem now</button>
+      <BotonRedeem id={id}/>
     </div>
     }
 
