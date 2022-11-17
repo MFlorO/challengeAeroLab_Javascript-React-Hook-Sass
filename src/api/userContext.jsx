@@ -1,16 +1,17 @@
 import { useEffect, useState, createContext, useContext } from "react";
 
 
-const url = "https://coding-challenge-api.aerolab.co/user/me";
+const URL_USER = process.env.REACT_APP_USER_ME;
+const TOKEN = process.env.REACT.APP_TOKEN;
 
-const header = {
+const HEADER = {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
     mode: 'cors',
     // cache: 'default',
     Accept: "application/json",
-    Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcxM2ZmOTUwNzZiMDAwMjEwZmY0ZTkiLCJpYXQiOjE2NjgzNjYzMjl9.xb8O2jflEBL2KmrMro7gOcO271bXMIrF2kqQmePmfSA",
+    Authorization: `${TOKEN}`,
   }
 };
 
@@ -24,7 +25,7 @@ export const UserProvider = ({ children }) =>{
 
 
   useEffect(() => {  //Pongo el fetch en el useEffect para que me haga la llamda de los datos cada vez que renderiza
-    fetch(url, header)
+    fetch(URL_USER, HEADER)
       .then((response) => response.json())  //Una vez que tengas el valor de la respuesta => transformala en un json
       .then((json) => {                    //Luego devolveme ese json
         setUserState(json)
