@@ -1,0 +1,32 @@
+
+.container {
+  width: 100%;
+  // max-width: 480px;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  // background-color: red;
+
+  .banner{
+    width: 100%;
+    height: 20rem;
+    background-image: url('../../assets/header.png');
+    background-size: cover;
+    background-position-y: 25rem;
+    background-position-x: left;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    h3{
+      padding: 0px 0px 3rem 5rem; //Arriba derecha abajo izquierda
+      color:white;
+      font-size: 3rem;
+    }
+
+  }
+}
+
+

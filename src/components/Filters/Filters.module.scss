@@ -1,0 +1,47 @@
+
+
+.container {
+    width: 40%;
+    display: flex;
+    padding: 0 0 1rem 0 ;
+    justify-content: space-around;
+    align-items: center;
+    border-left: 1px solid #A0A0A0;
+
+    h5{
+      color: #8a8989;
+      font-size: 18px;
+      font-weight: 500
+     }
+
+    .filter{
+      width: 80%;
+      height: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+        .button{
+          padding: 1rem;
+          margin-right: 0.50rem;
+          font-size: 18px;
+          background-color: #EDEDED;
+          color: #BDBDBD;
+          border: none;
+          border-radius: 4rem;
+          cursor: pointer;
+        }
+    
+        .buttonActive{
+          padding: 1rem;
+          margin-right: 0.50rem;
+          font-size: 18px;
+          background-color: #15CAF7;
+          color: white;
+          border: none;
+          border-radius: 4rem;
+          cursor: pointer;
+     } 
+   }
+}
+
