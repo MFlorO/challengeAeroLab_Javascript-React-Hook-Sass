@@ -2,7 +2,7 @@ import { useEffect, useState, createContext, useContext } from "react";
 
 
 const url = "https://coding-challenge-api.aerolab.co/products";
-
+const VITE_API_KEY = import.meta.env.VITE_API_KEY
 
 
 const header = ({
@@ -11,7 +11,7 @@ const header = ({
   headers: new Headers({
     "Content-Type": "application/json",
     "Accept": "application/json",
-    "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzcxM2ZmOTUwNzZiMDAwMjEwZmY0ZTkiLCJpYXQiOjE2NjgzNjYzMjl9.xb8O2jflEBL2KmrMro7gOcO271bXMIrF2kqQmePmfSA"
+    "Authorization": VITE_API_KEY
 })});
 
 

@@ -1,6 +1,6 @@
-import React,{useState, useEffect} from "react";
+import React,{ useState } from "react";
 import { ProductsList, Filters, Count, Search} from "~/components";
-import { useProduct, useMemoFilter } from "~/Hook";
+import { useProduct } from "~/Hook";
 import styles from "./Body.module.scss";
 import ButtonTryAgain from "./ButtonTryAgain/ButtonTryAgain";
 
