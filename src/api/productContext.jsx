@@ -52,10 +52,3 @@ export const useProductContext = () => {   //Cuando se quiera utilizar el contex
 
   return Context;
 }
-
-// fetch("https://coding-challenge-api.aerolab.co/products",  )
-// .then((response) => response.json()) 
-// .then((data) => {                    
-//  console.log(data)
-// })
-

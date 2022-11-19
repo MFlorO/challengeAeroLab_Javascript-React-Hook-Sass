@@ -17,7 +17,7 @@ const NavBar = () => {
       <img alt="logo" src={logo} />
 
       <div className={styles.user}>
-       <p>Flor Oldani</p>   
+       <p>{name}</p>   
         <div className={styles.points}>
           <p>{points}</p> 
           <button onClick={() => addPoints(1000)}><img alt="logo" src={icons} /></button>

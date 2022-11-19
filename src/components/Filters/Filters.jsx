@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Filters.module.scss";
 
-const filter = ["Most Recent", "Lowest Price", "Highest Price"]
+const filter = ["All Element", "Lowest Price", "Highest Price"]
 
 const Filters = ({filters, setFilters}) => {
 
