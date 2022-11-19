@@ -4,9 +4,9 @@ import styles from "./ProductsList.module.scss";
 
 
 
-const ProductsList = ({productCopia}) => {
+const ProductsList = ({products}) => {
 
-  const product = productCopia?.map((p) => {   //Mapeo los datos que me traje del hook para poder recorrer uno por uno 
+  const product = products?.map((p) => {   //Mapeo los datos que me traje del hook para poder recorrer uno por uno 
     const { img, category, name, _id:id, cost } = p;  //Destructuro lo que necesito
     return (
       <div key={id} className={styles.container}>

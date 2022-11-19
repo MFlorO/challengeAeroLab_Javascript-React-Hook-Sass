@@ -32,8 +32,6 @@ const Search = ({productCopia, setProductCopia, productAll, setMaximo}) => {
   };
 
 
-  
-
   const handleSubmit = (event) => {
     event.preventDefault(); //para que no refresque al dar "buscar"
 	  filtrar(search); //le paso lo que escribo en el input a la funcion filtrar. Esta va a recorrer el array con los datos de productos  y los va a filtrar de acuerdo al dato que escriba en el input

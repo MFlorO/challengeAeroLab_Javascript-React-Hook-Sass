@@ -2,18 +2,20 @@ import React,{useState, useEffect} from "react";
 import { ProductsList, Filters, Count, Search} from "~/components";
 import { useProduct, useMemoFilter } from "~/Hook";
 import styles from "./Body.module.scss";
+import ButtonTryAgain from "./ButtonTryAgain/ButtonTryAgain";
 
 
 const Body = () => {
 
   const productAll = useProduct(); //Me traigo del Hook los datos
 
-  const [filters, setFilters] = useState("")
+  const [productCopia, setProductCopia] = useState(productAll) //Creo una copia de la "data"
 
-  const [productCopia, setProductCopia] = useState(productAll)
+  const [filters, setFilters] = useState("") //Estado para setear cuando clickeo los botones filter
 
 
-  let filterProducts = () => { //SOLO se va a ejecutar cuando las dependencias cambien
+
+  let filterProducts = () => { 
    
     if(filters === "Highest Price"  ) return [...productCopia].sort((a,b) => b.cost - a.cost );
         
@@ -24,7 +26,8 @@ const Body = () => {
     return productCopia;
   }
 
-  console.log(productCopia)
+
+
 
   return (
     <div className={styles.container}>
@@ -39,7 +42,7 @@ const Body = () => {
         </div>
       </div>
 
-      {productCopia === "" ? <button onClick={() => setProductCopia(productAll)}>TRY AGAIN</button> : <ProductsList productCopia={filterProducts()} />}
+      {productCopia === "" ? <ButtonTryAgain productAll={productAll} />: <ProductsList products={filterProducts()} />}
 
       <div className={styles.subContainerAbajo}>
         <Count productAll={productAll} filterProducts={filterProducts}/>
