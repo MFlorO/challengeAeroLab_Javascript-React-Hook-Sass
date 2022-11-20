@@ -20,7 +20,7 @@ export const UserContext = createContext({})
 
 export const UserProvider = ({ children }) =>{
 
-  const [userState, setUserState] = useState(null) //Estado para guardarme el dato user
+  const [userState, setUserState] = useState({}) //Estado para guardarme el dato user
   // const [status, setStatus] = userState("pending") //Estado para saber el "status de la aplicacion"
 
 
