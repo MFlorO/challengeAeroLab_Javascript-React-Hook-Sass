@@ -37,7 +37,7 @@ const Body = () => {
           <Count productAll={productAll} filterProducts={filterProducts()}/>
           <Filters filters={filters} setFilters={setFilters}/>
         </div>
-        <div className={styles.dividor1}>
+        <div className={styles.dividor2}>
             <Search productCopia={productCopia} setProductCopia={setProductCopia} productAll={productAll} />
         </div>
       </div>
