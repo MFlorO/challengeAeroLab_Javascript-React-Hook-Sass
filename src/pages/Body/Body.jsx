@@ -2,7 +2,8 @@ import React from "react";
 import { ProductsList, Filters, Count, Search, Pagination} from "~/components";
 import { useProduct, UseHookFilterAndPaginado } from "~/Hook";
 import styles from "./Body.module.scss";
-import ButtonTryAgain from "./ButtonTryAgain/ButtonTryAgain";
+import TryAgain from "./TryAgain/TryAgain";
+
 
 
 const Body = () => {
@@ -29,7 +30,7 @@ const Body = () => {
 
       <div className={styles.subContainerMedio}>
       <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad}/>
-      {productCopia === "" ? <ButtonTryAgain />: <ProductsList products={filterProducts()} />}
+      {productCopia === "" ? <TryAgain />: <ProductsList products={filterProducts()} />}
       <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad}/>
       </div>
 
