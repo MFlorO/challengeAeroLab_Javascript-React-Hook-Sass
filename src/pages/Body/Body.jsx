@@ -10,7 +10,7 @@ const Body = () => {
 
   const productAll = useProduct(); //Me traigo del Hook los datos
 
-  const [filterProducts, productCopia, setProductCopia, filters, setFilters, currentPage, setCurrentPage, cantidad] = UseHookFilterAndPaginado();
+  const [filterProducts, productCopia, setProductCopia, filters, setFilters, currentPage, setCurrentPage, cantidad, itemsPerPage] = UseHookFilterAndPaginado();
 
 
 
@@ -29,9 +29,9 @@ const Body = () => {
       </div>
 
       <div className={styles.subContainerMedio}>
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad}/>
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
       {productCopia === "" ? <TryAgain />: <ProductsList products={filterProducts()} />}
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad}/>
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
       </div>
 
       <div className={styles.subContainerAbajo}>

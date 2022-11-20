@@ -4,14 +4,14 @@ import styles from './Pagination.module.scss'
 
 
 
-const Pagination = ({currentPage, setCurrentPage, cantidad, products}) => {
+const Pagination = ({currentPage, setCurrentPage, cantidad, products, itemsPerPage}) => {
 
 	const previuos = () =>{
-		currentPage > 0 && setCurrentPage(currentPage - 12)
+		currentPage > 0 && setCurrentPage(currentPage - itemsPerPage)
 	}
 
 	const next = () =>{
-		(cantidad !== products.length ) && setCurrentPage(currentPage + 12)
+		(cantidad !== products.length ) && setCurrentPage(currentPage + itemsPerPage)
 	}
 	
 

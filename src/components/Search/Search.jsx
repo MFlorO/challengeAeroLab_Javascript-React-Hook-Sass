@@ -5,6 +5,7 @@ import styles from './Search.module.scss'
 
 const Search = ({productCopia, setProductCopia, productAll, setCurrentPage}) => {
   
+  
   const [search, setSearch] = useState(""); //Estado del input
 
   const onSearchChange = (event) => {  //Funcion que me toma lo que escriba en el input 
@@ -18,15 +19,12 @@ const Search = ({productCopia, setProductCopia, productAll, setCurrentPage}) => 
 
       const resultados = productCopia.filter( (e) => e.category.toString().toLowerCase().includes(search) || e.name.toString().toLowerCase().includes(search)) //Filtro el original
 
-      resultados.length > 0 ? 
-                              setProductCopia(resultados)  //Busco y hay concidencias: Muestro la copia con los resultados 
-                              :  setProductCopia("")  //Busco y NO hay coincidencias --> Esto utilizo para el boton de TRY AGAIN
-    }
+      resultados.length > 0 ? setProductCopia(resultados) :  setProductCopia("")  //Busco y NO hay coincidencias --> Esto utilizo para el boton de TRY AGAIN
+                           //Busco y hay concidencias: Muestro la copia con los resultados 
 
-    else {  //Caso: Busco por segunda vez
+    } else {  //Caso: Busco por segunda vez
 
       const resultados = productAll.filter( (e) => e.category.toString().toLowerCase().includes(search) || e.name.toString().toLowerCase().includes(search)) //Filtro el original
-
       resultados.length > 0 ? setProductCopia(resultados) :  setProductCopia("")
     }
   };

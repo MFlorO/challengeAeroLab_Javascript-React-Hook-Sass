@@ -13,17 +13,20 @@ export const UseHookFilterAndPaginado = () => {
 	const [filters, setFilters] = useState("") //Estado para setear cuando clickeo los botones filter
   
 	const [currentPage, setCurrentPage] = useState(0) //Estado para manejar la pagina
+
+	
+	const itemsPerPage = 12
 	
 
 	let filterProducts = () => { 
    
-		if(filters === "Highest Price"  ) return [...productCopia].slice(currentPage, currentPage + 12).sort((a,b) => b.cost - a.cost );
+		if(filters === "Highest Price"  ) return [...productCopia].slice(currentPage, currentPage + itemsPerPage).sort((a,b) => b.cost - a.cost );
 			
-		if(filters === "Lowest Price") return [...productCopia].slice(currentPage, currentPage + 12).sort((a,b) => a.cost - b.cost )
+		if(filters === "Lowest Price") return [...productCopia].slice(currentPage, currentPage + itemsPerPage).sort((a,b) => a.cost - b.cost )
 			
-		if(filters === "All Element") return [...productCopia].slice(currentPage, currentPage + 12)
+		if(filters === "All Element") return [...productCopia].slice(currentPage, currentPage + itemsPerPage)
 	
-		return [...productCopia].slice(currentPage, currentPage + 12);
+		return [...productCopia].slice(currentPage, currentPage + itemsPerPage);
 	  }
 	
 	  let cantidad = filterProducts().length > 0 ? filterProducts().length + currentPage : currentPage
@@ -31,7 +34,7 @@ export const UseHookFilterAndPaginado = () => {
 	 
 
 
-		return [filterProducts, productCopia, setProductCopia, filters, setFilters, currentPage, setCurrentPage, cantidad ]
+		return [filterProducts, productCopia, setProductCopia, filters, setFilters, currentPage, setCurrentPage, cantidad, itemsPerPage ]
 };
 
 
