@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './BotonRedeem.module.scss'
 import { useRedeem, useProduct } from '../../../Hook'
+import Swal from 'sweetalert2'
 
 const BotonRedeem = ({id}) => {
 	const productAll = useProduct(); //Me traigo del Hook los datos
@@ -14,7 +15,23 @@ const BotonRedeem = ({id}) => {
 	console.log("redeemHistory", redeemHistory)
 	
 	const handleChange = () => {
-		addRedeem(productFilter)
+		Swal.fire({
+			title: 'Are you sure?',
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#15CAF7BD',
+			focusConfirm: 'none',
+			cancelButtonColor: '#BDBDBD',
+			confirmButtonText: 'Yes'
+		  }).then((result) => {
+			if (result.isConfirmed) {
+			  Swal.fire(
+				addRedeem(productFilter),
+				'Redeemed!',
+				'success'
+			  )
+			}
+		  })
 	}
 
 
