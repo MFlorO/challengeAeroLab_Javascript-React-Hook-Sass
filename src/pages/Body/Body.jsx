@@ -14,7 +14,6 @@ const Body = () => {
 
 
 
-
   return (
     <div className={styles.container}>
 
@@ -28,14 +27,17 @@ const Body = () => {
         </div>
       </div>
 
-      <div className={styles.subContainerMedio}>
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
-      {productCopia === "" ? <TryAgain />: <ProductsList products={filterProducts()} />}
-      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
-      </div>
-
       <div className={styles.subContainerAbajo}>
-        <Count productAll={productCopia} current={cantidad}/>
+      <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
+       
+       { productCopia === "" ? /*Renderizado de acuerdo a si obtengo algo del search o no */
+          <TryAgain />
+        : <> 
+            <ProductsList products={filterProducts()} /> 
+            <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} products={productCopia} cantidad={cantidad} itemsPerPage={itemsPerPage}/>
+            <Count productAll={productCopia} current={cantidad}/>
+          </>
+       }
       </div>
 
     </div>

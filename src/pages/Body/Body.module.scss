@@ -2,6 +2,8 @@
 .container {
   background-color: #F9F9F9;
   padding: 2rem 10rem;
+  height: auto;
+  min-height: 70%;  //Esto me sirve para cuando busco y solo me devuelve el mensaje TRY AGAIN el height se "acorte" pero con un tamaño minimo
 }
 
 .subContainerArriba{
@@ -23,13 +25,9 @@
   width: 40%;
 }
 
-.subContainerMedio{
+.subContainerAbajo{
   align-items: center;
   display: flex;  
   flex-direction: column;
 }
 
-.subContainerAbajo{
-  display: flex;
-  border-bottom: 1px solid #A0A0A0;
-}
