@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styles from './Search.module.scss'
 
-const Search = ({productCopia, setProductCopia, productAll, setMaximo}) => {
+
+
+const Search = ({productCopia, setProductCopia, productAll, setCurrentPage}) => {
   
   const [search, setSearch] = useState(""); //Estado del input
 
@@ -25,9 +27,7 @@ const Search = ({productCopia, setProductCopia, productAll, setMaximo}) => {
 
       const resultados = productAll.filter( (e) => e.category.toString().toLowerCase().includes(search) || e.name.toString().toLowerCase().includes(search)) //Filtro el original
 
-      resultados.length > 0 ? setProductCopia(resultados)
-         // setMaximo(Math.ceil(resultadosBusqueda.length / 10) - 1 )  //Resetear la cantidad total de paginas porque cuando busco algo en search va a disminuir el array total
-         :  setProductCopia("")
+      resultados.length > 0 ? setProductCopia(resultados) :  setProductCopia("")
     }
   };
 
@@ -36,6 +36,7 @@ const Search = ({productCopia, setProductCopia, productAll, setMaximo}) => {
     event.preventDefault(); //para que no refresque al dar "buscar"
 	  filtrar(search); //le paso lo que escribo en el input a la funcion filtrar. Esta va a recorrer el array con los datos de productos  y los va a filtrar de acuerdo al dato que escriba en el input
     setSearch("");
+    setCurrentPage(0) //Reseteo la pagina en cero. Caso: Cuando hago una busqueda, tiene que funcionar el paginado
   };
 
 
@@ -51,7 +52,6 @@ const Search = ({productCopia, setProductCopia, productAll, setMaximo}) => {
       />
 
       <button title="Search" type="submit">SEARCH</button>
-
 
     </form>
   );

@@ -23,8 +23,13 @@
   width: 40%;
 }
 
+.subContainerMedio{
+  align-items: center;
+  display: flex;  
+  flex-direction: column;
+}
+
 .subContainerAbajo{
-  margin-top: 4rem;
   display: flex;
   border-bottom: 1px solid #A0A0A0;
 }

@@ -1,6 +1,7 @@
 export * from './Count';
 export * from './Filters';
 export * from './NavBar';
+export * from './Pagination';
 export { default as BotonCanjear } from './Products/BotonCanjear/BotonCanjear';
 export { default as BotonRedeem } from './Products/BotonRedeem/BotonRedeem';
 export * from './Products';

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from "./Count.module.scss";
 
-const Count = ({productAll, filterProducts}) => {
+const Count = ({productAll, current}) => {
 
-	const current = filterProducts.length
+	
 	const total = productAll.length
 
 	return (
