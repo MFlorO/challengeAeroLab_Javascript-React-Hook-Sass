@@ -8,9 +8,9 @@
     align-items: center;
 
 
-    input{
-        width: 80%;
-        height: 3.5rem;
+    .input{
+        width: 84%;
+        height: 3.7rem;
         margin-right: 0.50rem;
         font-size: 15px;
         background-color: #EDEDED;
@@ -18,19 +18,21 @@
         border: none;
         border-radius: 2rem;
         padding-left: 2rem;
-        text-align:start
+        text-align:start;
+        outline:none
     }
     
-    input:focus{
+    .input:focus{
         border: 2px solid #15CAF7;
         color: #15CAF7;
     }
+
 
     button{
         position: absolute;
         right: 14rem;
         width: 8%;
-        height: 3.5rem;
+        height: 3.4rem;
         border-radius: 2rem;
         color: #15CAF7;
         font-size: 17px;
