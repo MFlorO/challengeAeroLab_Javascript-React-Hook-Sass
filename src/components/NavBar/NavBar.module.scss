@@ -16,7 +16,8 @@
     }
 
     .user{
-      width: 10%;
+      min-width: 18%;
+      width: auto;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -26,14 +27,14 @@
       }
 
       .points{
-        width: 5rem;
-        padding: 0 2rem;
+        width: 26%;
         height: 2rem;
         display: flex;
         border-radius: 15px;
         background-color: #EDEDED;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+
 
         p{
           color: #6d6d6d
@@ -52,10 +53,9 @@
           height: 20px;
           width: 25px;
           margin-top: 0.3rem;
-          margin-left: 0.1rem;
         }
       }
-    }
 
+    }
   }
   
