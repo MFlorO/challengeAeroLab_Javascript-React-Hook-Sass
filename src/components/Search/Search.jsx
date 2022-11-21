@@ -12,7 +12,7 @@ const Search = ({productCopia, setProductCopia, productAll, setCurrentPage}) => 
     setSearch((event.target.value).toLowerCase())
   };
 
-  console.log(search)
+
 
   const filtrar = (search) => {
 
