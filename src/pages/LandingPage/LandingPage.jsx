@@ -46,7 +46,7 @@ const LandingPage = () => {
 	<div className={styles.container}>
 		
 
-		   <button onClick={() => navigate("/home")}>HOME</button>
+		   <button onClick={() => navigate("/home")}>BUY</button>
 		   
 		
 	

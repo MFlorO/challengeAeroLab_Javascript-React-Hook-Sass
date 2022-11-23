@@ -13,8 +13,10 @@
       cursor: pointer;
       border-radius: 15px;
       border: none;
-      background-color: white;
-      color: #909090;
+      background-color: #58C0C6;
+      color: rgba(255, 255, 255, 0.901);
+      font-size: 18px;
+      font-weight: 500;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       transition: 1s ease-in-out;
    }
@@ -22,7 +24,7 @@
 
    button:hover {
       transition: 1s ease-in-out;
-      background: #15caf7;
+      background: #7B87BA;
       color: white
    }
 
