@@ -5,12 +5,13 @@ import styles from "./NavBar.module.scss";
 // import { useAuth0 } from '@auth0/auth0-react'
 import { useUser } from "~/Hook/";
 // import { Login } from "../Login";
-
+import { useNavigate } from "react-router";
 
 
 
 
 const NavBar = () => {
+	const navigate = useNavigate();
 
   const [_id, name, points, addPoints ] = useUser() //Me traigo los valores desde el Hook de user
 
@@ -20,7 +21,7 @@ const NavBar = () => {
 
   return (
     <div className={styles.container}>
-      <img alt="logo" src={logo} />
+      <button className={styles.button} onClick={() => navigate("/")}><img alt="logo" src={logo} /></button>
 
       <div className={styles.user}>
        {/* {isAuthenticated && ( */}

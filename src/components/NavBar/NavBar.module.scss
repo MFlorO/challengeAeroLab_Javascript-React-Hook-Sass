@@ -10,10 +10,19 @@
     align-items: center;
     padding: 0 2rem;
 
-    img{
-      height: 30px;
-      width: 35px;
+    .button{
+      border: none; 
+      outline: none;
+      background-color: none;
+
+      img{
+        height: 30px;
+        width: 35px;
+        background-color: none;
+        cursor: pointer;
+      }
     }
+   
 
     .user{
       min-width: 18%;

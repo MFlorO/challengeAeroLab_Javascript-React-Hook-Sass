@@ -3,10 +3,11 @@ import styles from './LandingPage.module.scss'
 import img from '~/assets/fondoLanding.png'
 import { useNavigate } from "react-router";
 
+
+
 const LandingPage = () => {
 
 	const navigate = useNavigate();
-
 
 	return (
 	<div className={styles.container}>

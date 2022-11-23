@@ -33,9 +33,9 @@ export const ProductProvider = ({ children }) =>{
   }, [])
 
 
-  // if (!productState) {
-  //   return <h1>Loading...</h1>
-  // }
+  if (!productState) {
+    return 
+  }
 
   return <ProductContext.Provider value={{ productState }}>{children}</ProductContext.Provider>
 }
