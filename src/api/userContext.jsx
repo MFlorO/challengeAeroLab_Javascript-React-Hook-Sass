@@ -1,5 +1,5 @@
 import { useEffect, useState, createContext, useContext } from "react";
-import { useAuth0 } from '@auth0/auth0-react'
+// import { useAuth0 } from '@auth0/auth0-react'
 
 const url = "https://coding-challenge-api.aerolab.co/user/me";
 const VITE_API_KEY = import.meta.env.VITE_API_KEY
@@ -44,9 +44,9 @@ export const UserProvider = ({ children }) =>{
     setUserState({...userState,redeemHistory: userState.redeemHistory.concat(obj) })
   }
 
-  if (!userState) {
-    return <h1>Loading...</h1>
-  }
+  // if (!userState) {
+  //   return <h1>Loading...</h1>
+  // }
 
   return <UserContext.Provider value={{ userState, addPoints, addRedeem }}>{children}</UserContext.Provider>
 }

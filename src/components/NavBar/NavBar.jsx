@@ -2,9 +2,9 @@ import React from "react";
 import logo from "~/assets/logo.svg";
 import icons from "~/assets/icons/coin.svg";
 import styles from "./NavBar.module.scss";
-import { useAuth0 } from '@auth0/auth0-react'
+// import { useAuth0 } from '@auth0/auth0-react'
 import { useUser } from "~/Hook/";
-import { Login } from "../Login";
+// import { Login } from "../Login";
 
 
 
@@ -14,7 +14,7 @@ const NavBar = () => {
 
   const [_id, name, points, addPoints ] = useUser() //Me traigo los valores desde el Hook de user
 
-  const {user, isAuthenticated, isLoading} = useAuth0()
+  // const {user, isAuthenticated, isLoading} = useAuth0()
 
 
 
@@ -33,7 +33,7 @@ const NavBar = () => {
         </>
        {/* ) */}
       {/* } */}
-        <Login />
+        {/* <Login /> */}
       </div>
     </div>
   );
