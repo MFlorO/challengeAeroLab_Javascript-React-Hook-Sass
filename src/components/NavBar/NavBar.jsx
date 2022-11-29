@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "~/assets/logo.svg";
+import logo from "~/assets/logo.jpg";
 import icons from "~/assets/icons/coin.svg";
 import styles from "./NavBar.module.scss";
 // import { useAuth0 } from '@auth0/auth0-react'
