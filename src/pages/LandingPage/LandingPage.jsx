@@ -43,14 +43,9 @@ const LandingPage = () => {
 	const navigate = useNavigate();
 
 	return (
-	<div className={styles.container}>
-		
-
-		   <button onClick={() => navigate("/home")}>BUY</button>
-		   
-		
-	
-	</div>
+	  <div className={styles.container}>
+		<button onClick={() => navigate("/home")}>BUY</button>
+	  </div>
 	);
 };
 
