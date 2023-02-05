@@ -11,8 +11,8 @@ const BotonRedeem = ({id}) => {
 
 	const productFilter =  productAll.filter( p => id === p._id)
 
-	console.log(productFilter)
-	console.log("redeemHistory", redeemHistory)
+	// console.log(productFilter)
+	// console.log("redeemHistory", redeemHistory)
 	
 	const handleChange = () => {
 		Swal.fire({
