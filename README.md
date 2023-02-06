@@ -1,3 +1,14 @@
+## Descripcion del proyecto
+crear una vista de catálogo para una aplicación de programa de fidelización. El objetivo principal del producto es ayudar a los usuarios a canjear artículos a través de un sistema basado en puntos. 
+Trabaje a partir de una API REST
+
+
+## Skills utilizadas:
+- React 
+- Javascript
+- Hooks (useContext, useMemo y hook personalizados)
+- Saas.
+
 
 ## Instrucciones para correr el servidor de desarrollo
 
