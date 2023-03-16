@@ -5,7 +5,7 @@ import { ProductProvider } from "./api/productContext";
 import { UserProvider } from "./api/userContext";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
-import { AuthProvider } from "./auth";
+import { AuthProvider } from "./auth/context";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
