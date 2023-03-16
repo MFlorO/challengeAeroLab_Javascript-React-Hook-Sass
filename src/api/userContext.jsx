@@ -1,5 +1,4 @@
 import { useEffect, useState, createContext, useContext } from "react";
-// import { useAuth0 } from '@auth0/auth0-react'
 
 const url = "https://coding-challenge-api.aerolab.co/user/me";
 const VITE_API_KEY = import.meta.env.VITE_API_KEY
@@ -33,7 +32,7 @@ export const UserProvider = ({ children }) =>{
       })
   }, [])
 
-
+  
   const addPoints = (number) =>{
     // if(!userState) return
 
